@@ -36,11 +36,11 @@ public class Sequencial {
 
 Análise de Complexidade
 
-* [x] **Melhor caso - elemento a ser buscado é encontrado logo na primeira tentativa da busca
+* [x] **Melhor caso - O(1)  elemento a ser buscado é encontrado logo na primeira tentativa da busca
   
 * [x] Caso médio - o elemento é encontrado após (N+1)/2 comparações. O algoritmo de busca linear é um algoritmo O(n)
  
-* [x] Pior caso - o elemento a ser buscado encontra-se na última posição e são feitas N comparações, sendo N o número total de elementos**
+* [x] Pior caso - O(n) o elemento a ser buscado encontra-se na última posição e são feitas N comparações, sendo N o número total de elementos**
 
 
 * **Pesquisa binária;**
@@ -75,17 +75,20 @@ Uma função recursiva é repetitiva e é executada em sequência. Ela começa a
 **Análise de Complexidade**
 
 Algoritmo Busca Binária. Ele é ótimo e eficiente. É aplicável como solução em problemas de busca onde os elemento estão ordenados. Estruturas como Arrays e Listas encadeadas podem utilizar esse algoritmo de busca de forma eficiente.
-* [x] **Melhor caso
+* [x] **Melhor caso - 0(1)
 Sua complexidade de tempo de execução, O(log n) é melhor comparada à busca sequencial O(n). Através do paradigma Dividir para Conquistar esse algoritmo pode ser implementado de forma recursiva ou iterativa.
 
-* [x] Caso médio
-* [x] Pior caso -  Ocorre quando o elemento que buscamos não está no vetor. Tanto a versão iterativa, como a versão recursiva possuem complexidade de O(log n)**
+* [x] Caso médio - O(log n)
+* [x] Pior caso -  O(log n)}Ocorre quando o elemento que buscamos não está no vetor. Tanto a versão iterativa, como a versão recursiva possuem complexidade de O(log n)**
 
 * **Pesquisa sequencial multithread.**
+  "Uma Thread é Um fluxo de controle sequencial isolado dentro de um programa"
+  Como um programa sequencial qualquer, um thread tem um começo, um fim, e uma seqüência de comandos. Entretanto, um thread não é um programa, não roda sozinho, roda dentro de um programa.
+  Threads permitem que um programa simples possa executar várias tarefas diferentes ao mesmo tempo, independentemente umas das outras. Programas multi-threaded são programas que contém vários threads, executando tarefas distintas, ao mesmo tempo.
 
-* [x] **Melhor caso
-* [x] Caso médio
-* [x] Pior caso**
+* [x] **Melhor caso - O(nlogn)
+* [x] Caso médio - O(n2)
+* [x] Pior caso - O(n2)  **
 
 
 
@@ -187,7 +190,12 @@ int trocas = 0;
  ````
 
 * É possível a implementação de threads para melhorar o desempenho do algoritmo? Se sim, como seria esta implementação?
-
+  QuickSort é uma técnica de classificação popular baseada no algoritmo de divisão e conquista. Nesta técnica, um elemento é escolhido como pivô e o array é particionado em torno dele. O objetivo da partição é, dado um array e um elemento x do array como pivô, colocar x em sua posição correta em um array ordenado e colocar todos os elementos menores (menores que x) antes de x, e colocar todos os elementos maiores (maior que x) depois de x.
+  Multi-threading permite a execução simultânea de duas ou mais partes de um programa para utilização máxima da CPU. Cada parte desse programa é chamada de thread. Portanto, threads são processos leves dentro de um processo
+  A thread principal chama o método quicksort.
+  O método particiona o array e verifica o número de threads atuais.
+  Novos threads são chamados para a próxima etapa usando o mesmo método paralelo.
+  Use o método quicksort normal único.
 * [x] Classe Java apresentado caminho - src/br/com/ordenacao/QuickSortMultiThreading.java
 
 Para implementar este algoritmo, siga as etapas mencionadas abaixo-
